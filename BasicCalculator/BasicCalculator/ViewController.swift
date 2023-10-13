@@ -27,6 +27,19 @@ class ViewController: UIViewController {
         }
     }
 
+    func getAddResult(num1: Int, num2: Int) -> Int{
+        return num1 + num2
+    }
+    func getSubtractionResult(num1: Int, num2:Int) -> Int{
+        return num1 - num2
+    }
+    func getMultiplicationResult(num1: Int, num2:Int) -> Int{
+        return num1 * num2
+    }
+    func getDivisionResult(num1: Int, num2:Int) -> Int{
+        return num1 / num2
+    }
+
     @IBAction func addButtonPressed(_ sender: UIButton) {
         resultLabel.text = resultLabel.text! + "+"
     }
@@ -46,7 +59,10 @@ class ViewController: UIViewController {
         resultLabel.text = ""
     }
     @IBAction func evaluteButtonPressed(_ sender: UIButton) {
+        for i in resultLabel.text!{
 
+
+        }
     }
 }
 
