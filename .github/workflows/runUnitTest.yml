@@ -16,8 +16,8 @@ jobs:
           swift-version: ${{ matrix.swift }}
       - uses: actions/checkout@v4
       - name: Build
-        run: echo pwd
-           # xcodebuild clean build -project "BasicCalculator.xcodeproj" -scheme "BasicCalculator" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+        run: |
+           sudo xcode-select clean build -project "BasicCalculator.xcodeproj" -scheme "BasicCalculator" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
      
       - name: Test
         run: |
